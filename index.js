@@ -12,9 +12,9 @@ app.use(bodyParser.urlencoded({ extended: false }))
 // Configuración de la conexión a la base de datos MySQL
 const db = mysql.createConnection({
   host: 'localhost',
-  user: 'root', // Usuario 'root' sin contraseña
-  password: '', // Contraseña del usuario 'root'
-  database: 'orbe2_db' // Reemplaza con el nombre de tu base de datos
+  user: 'root', // 
+  password: '', // 
+  database: 'orbe2_db' //
 });
 
 // Conexión a la base de datos
@@ -57,7 +57,7 @@ app.post('/api/login', (req, res) => {
 });
 
 app.get('/api/users/me', (req, res) => {
-  const { correoElectronico } = req.query; // Supongamos que el correo electrónico se envía como parámetro de consulta
+  const { correoElectronico } = req.query; 
 
   if (!correoElectronico) {
     return res.status(400).json({ message: 'Correo electrónico es requerido' });
